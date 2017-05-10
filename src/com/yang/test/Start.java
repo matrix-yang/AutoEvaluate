@@ -1,6 +1,8 @@
 package com.yang.test;
 
+import com.yang.evaluate.Calculate;
 import com.yang.mod.Music;
+import com.yang.mod.Result;
 import com.yang.util.Convert;
 
 public class Start {
@@ -8,9 +10,12 @@ public class Start {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Convert convert=new Convert();
-		Music music =convert.getMusicFromText("KeyCount_1.txt");
-		System.out.println(music.getDuration());
-		System.out.println(music.getKeyNum());
+		Music stand =convert.getMusicFromText("KeyCount_1.txt");
+		Music input =convert.getMusicFromText("KeyCount_4.txt");
+		Calculate calculate=new Calculate();
+		Result result=calculate.getResult(stand, input);
+		System.out.println("result.getScore()---------------->"+result.getScore());
+		System.out.println("result.getStand()---------------->"+result.getStand());
 /*		String text="04-29 18:35:46.460: V/KeyCount(15675): 7次：音名：#F(bG)_5, 键号：58, 频率：739.989Hz,误差：未计算(精度：0.8）	 强度：20.708987024212735";
 		
 		System.out.println(convert.getStrFromText( ": ", 0, text));

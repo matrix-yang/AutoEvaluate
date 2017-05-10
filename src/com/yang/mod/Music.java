@@ -22,6 +22,10 @@ public class Music {
 		return keyLst.get(index);
 	}
 	
+	public int length() {
+		return keyLst.size();
+	}
+	
 	public Key next() {
 		return keyLst.get(++i);
 	}

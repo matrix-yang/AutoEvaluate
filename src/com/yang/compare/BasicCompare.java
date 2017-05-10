@@ -18,15 +18,15 @@ public class BasicCompare implements Compare{
 	@Override
 	public float[] compareKey(Key stand, Key input) {
 		// TODO Auto-generated method stub
-		float rs[]=new float[1];
+		float rs[]=new float[3];
 		if (stand.getNum()==input.getNum()) {
-			rs[0]=1;    //key是否匹配
+			rs[0]=1.0f;    //key是否匹配
 			rs[1]=1;	//键位的得分
-			rs[3]=1;	//声音强度的分
+			rs[2]=1;	//声音强度的分
 		}else {
 			rs[0]=0;
 			rs[1]=0;
-			rs[3]=1;
+			rs[2]=1;
 		}
 		return rs;
 	}
@@ -36,18 +36,18 @@ public class BasicCompare implements Compare{
 		boolean flag=true; //是否回朔
 		int index; //回溯记录
 		
-		float score=0;
-		if (stand.getKeyNum()<input.getKeyNum()) {
+		float score=0;  //记录分数
+		if (stand.getKeyNum()<=input.getKeyNum()) {
 			for (int i = 0; i < stand.getKeyNum(); i++) {
 				float num[]=compareKey(stand.next(), input.next());
-				if (num[0]==1) {
+				if (num[0]==1.0f) {
 					score=score+num[1]+num[2];
 				}else {
 					flag=true;
 					index=i;
 					for (int j = 0; j < 5; j++) {
 						float num1[]=compareKey(stand.getKey(i), input.next());
-						if (num1[0]==1) {
+						if (num1[0]==1.0f) {
 							score=score+num1[1]+num1[2];
 							flag=false;
 							break;
@@ -58,7 +58,11 @@ public class BasicCompare implements Compare{
 					}
 				}				
 			}			
+		}else {
+			
 		}
+		
+		result.setScore(score/result.getStand()*100/2);
 		return result;
 	}
 
