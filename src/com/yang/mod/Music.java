@@ -4,20 +4,22 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.xml.crypto.Data;
-
 public class Music {
 	private List<Key> keyLst;   //按键序列
 	private int keyNum=0;			//乐曲有多少个键
 	private float duration=0;		//乐曲时长 单位秒
 	private int i=-1;             //游标   指示当前所指的KEY的位置
-	
+	private int residue;          //剩余未比较的键数
 	
 	public Music() {
 		// TODO Auto-generated constructor stub
 		this.keyLst=new ArrayList<>();
 	}
 	
+	public int getResidue() {
+		return this.length()-i-1;
+	}
+
 	public Key getKey(int index) {
 		return keyLst.get(index);
 	}
@@ -27,6 +29,9 @@ public class Music {
 	}
 	
 	public Key next() {
+		if (++i>=this.length()-1) {
+			return keyLst.get(this.length()-1);
+		}
 		return keyLst.get(++i);
 	}
 	public Key pre() {

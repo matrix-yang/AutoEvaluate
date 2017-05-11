@@ -1,7 +1,5 @@
 package com.yang.compare;
 
-import java.util.List;
-
 import com.yang.mod.Key;
 import com.yang.mod.Music;
 import com.yang.mod.Result;
