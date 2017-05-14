@@ -9,9 +9,10 @@ public class Result {
 	private long standTime;   //标准输入时间   单位秒
 	private long inputTime;	//标准输出时间
 	private long timeDiff;    //时间差值inpuTime - standTime
+	private float time_ratio; //时间差比值 timediff/standtime
 	private float standStrong; //标准键位平均强度
 	private float inputStrong; //输入键位平均强度
-	private float strong_ratio;  //声音强度比值，弹奏音强/标准音强  ，>1表示弹奏着音量大
+	private float strongDiff;  //声音强度比值，弹奏音强-标准音强  ，>0表示弹奏着音量大
 	
 	
 	private float score;    //综合获得的分数
@@ -107,13 +108,24 @@ public class Result {
 	}
 
 
-	public float getStrong_ratio() {
-		return strong_ratio;
+
+	public float getTime_ratio() {
+		return time_ratio;
 	}
 
 
-	public void setStrong_ratio(float strong_ratio) {
-		this.strong_ratio = strong_ratio;
+	public void setTime_ratio(float time_ratio) {
+		this.time_ratio = time_ratio;
+	}
+
+
+	public float getStrongDiff() {
+		return strongDiff;
+	}
+
+
+	public void setStrongDiff(float strongDiff) {
+		this.strongDiff = strongDiff;
 	}
 
 

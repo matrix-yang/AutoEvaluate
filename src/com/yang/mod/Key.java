@@ -9,6 +9,10 @@ public class Key {
 	private float strong;
 	private float HZ;
 	private Date date;
+	private int times;
+	private float duration;
+	private float error;
+	
 	public Key() {
 	}
 	public Key(int seq, int num, String name, float strong, float hZ, Date date, int times,
@@ -23,9 +27,7 @@ public class Key {
 		this.times = times;
 		this.error = error;
 	}
-	private int times;
-	private float duration;
-	private float error;
+
 	
 	public float getError() {
 		return error;

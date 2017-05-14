@@ -54,7 +54,7 @@ public class Calculate {
 		result.setStand(st);
 		result.setInputStrong(in_strong);
 		result.setStandStrong(st_strong);
-		result.setStrong_ratio(strong_ratio);
+		//result.setStrong_ratio(strong_ratio);
 		result.setStandTime(st_time);
 		result.setInputTime(in_time);
 		result.setTimeDiff(time_diff);
