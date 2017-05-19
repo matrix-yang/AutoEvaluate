@@ -40,8 +40,8 @@ public class CompareFeatureKey extends CompareStrong{
 			s_music.add(stand.getKey(i));
 		}
 		for (int i = 0; i < s_music.length(); i++) {
-			score=this.evaluate(stand, input);
+			score+=this.evaluate(stand, input);
 		}
-		return 1f;
+		return score;
 	}
 }

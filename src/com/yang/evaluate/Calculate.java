@@ -70,6 +70,12 @@ public class Calculate {
 		this.compare=new CompareStrong(strong_ratio);				
 	}
 	
+	//Ñ¡ÔñÌØÕ÷¼ü
+	public int selectFeatureKey(Music stand,Music input){
+		
+		return 1;
+	}
+	
 	public Result getResult(Music stand,Music input) {
 		selectCompare(stand, input);
 		float score1=compare.divide(stand, input);

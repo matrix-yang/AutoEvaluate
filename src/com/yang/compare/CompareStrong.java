@@ -24,13 +24,13 @@ public class CompareStrong extends BasicCompare {
 			// 声音强度的分
 			float diff = stand.getStrong() * super.factor - input.getStrong();
 			if (diff <= DATA.DIFF_STRONG_LEVEL1) {
-				rs[2] = 1;
+				rs[2] = DATA.DIFF_STRONG_SCORE1;
 			} else if (diff <= DATA.DIFF_STRONG_LEVEL2) {
-				rs[2] = 0.6f;
+				rs[2] = DATA.DIFF_STRONG_SCORE2;
 			} else if (diff <= DATA.DIFF_STRONG_LEVEL3) {
-				rs[2] = 0.3f;
+				rs[2] = DATA.DIFF_STRONG_SCORE3;
 			} else if (diff <= DATA.DIFF_STRONG_LEVEL4) {
-				rs[2] = 0.1f;
+				rs[2] = DATA.DIFF_STRONG_SCORE4;
 			} else {
 				rs[2] = 0f;
 			}
@@ -40,13 +40,13 @@ public class CompareStrong extends BasicCompare {
 			// 声音强度的分
 			float diff = stand.getStrong() * super.factor - input.getStrong();
 			if (diff <= DATA.DIFF_STRONG_LEVEL1) {
-				rs[2] = 1;
+				rs[2] = DATA.DIFF_STRONG_SCORE1;
 			} else if (diff <= DATA.DIFF_STRONG_LEVEL2) {
-				rs[2] = 0.6f;
+				rs[2] = DATA.DIFF_STRONG_SCORE2;
 			} else if (diff <= DATA.DIFF_STRONG_LEVEL3) {
-				rs[2] = 0.3f;
+				rs[2] = DATA.DIFF_STRONG_SCORE3;
 			} else if (diff <= DATA.DIFF_STRONG_LEVEL4) {
-				rs[2] = 0.1f;
+				rs[2] = DATA.DIFF_STRONG_SCORE4;
 			} else {
 				rs[2] = 0f;
 			}
