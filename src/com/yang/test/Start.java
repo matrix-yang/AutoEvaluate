@@ -10,8 +10,8 @@ public class Start {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Convert convert=new Convert();
-		Music stand =convert.getMusicFromText("KeyCount_1.txt");
-		Music input =convert.getMusicFromText("KeyCount_4.txt");
+		Music stand =convert.getMusicFromText("all.txt");
+		Music input =convert.getMusicFromText("bll.txt");
 		Calculate calculate=new Calculate();
 		Result result=calculate.getResult(stand, input);
 		System.out.println("result.getScore()---------------->"+result.getScore());

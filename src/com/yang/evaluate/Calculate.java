@@ -55,22 +55,33 @@ public class Calculate {
 		result.setInputStrong(in_strong);
 		result.setStandStrong(st_strong);
 		//result.setStrong_ratio(strong_ratio);
+		result.setStrongDiff(in_strong-st_strong);
 		result.setStandTime(st_time);
 		result.setInputTime(in_time);
 		result.setTimeDiff(time_diff);
 				
 		//根据初步比较结果选择计算分数的方案
-		if (Math.abs(diff)<0.5) {
-			this.compare=new CompareStrong(strong_ratio);
-		}else {
+		/*if (Math.abs(diff)<0.5) {
 			this.compare=new BasicCompare();
-		}
-						
+		}else {
+			this.compare=new CompareStrong(strong_ratio);
+			//this.compare=new BasicCompare();
+		}*/
+		this.compare=new CompareStrong(strong_ratio);				
 	}
 	
 	public Result getResult(Music stand,Music input) {
 		selectCompare(stand, input);
-		Result rs=compare.evaluate(stand, input, result);
-		return rs;		
+		float score1=compare.divide(stand, input);
+		System.out.println("score1----------------------->"+score1);
+		
+		//回朔指针
+		input.setI(-1);
+		stand.setI(-1);
+		float score2=compare.evaluate(input, stand);
+		System.out.println("score2----------------------->"+score2);
+		result.setScore(Math.max(score1, score2)/stand.getKeyNum()*100/2);
+		System.out.println(Math.max(score1, score2)/stand.getKeyNum()*100/2);
+		return this.result;		
 	}
 }

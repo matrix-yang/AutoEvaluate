@@ -21,6 +21,9 @@ public class Music {
 	}
 
 	public Key getKey(int index) {
+		if (index>=this.length()-1) {
+			index=this.length()-1;			
+		}
 		return keyLst.get(index);
 	}
 	
@@ -29,10 +32,13 @@ public class Music {
 	}
 	
 	public Key next() {
-		if (++i>=this.length()-1) {
+		int index=i;
+		if (++index>=this.length()-1) {
+			i=this.length()-1;
 			return keyLst.get(this.length()-1);
 		}
-		return keyLst.get(++i);
+		i++;
+		return keyLst.get(i);
 	}
 	public Key pre() {
 		return keyLst.get(--i);

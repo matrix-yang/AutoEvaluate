@@ -12,7 +12,7 @@ public class Result {
 	private float time_ratio; //时间差比值 timediff/standtime
 	private float standStrong; //标准键位平均强度
 	private float inputStrong; //输入键位平均强度
-	private float strongDiff;  //声音强度比值，弹奏音强-标准音强  ，>0表示弹奏着音量大
+	private float strongDiff;  //声音强度差值，弹奏音强-标准音强  ，>0表示弹奏着音量大
 	
 	
 	private float score;    //综合获得的分数

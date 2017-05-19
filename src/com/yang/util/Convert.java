@@ -25,15 +25,15 @@ public class Convert {
         File file = new File(fileName);
         BufferedReader reader = null;
         try {
-            System.out.println("以行为单位读取文件内容，一次读一整行：");
+            //System.out.println("以行为单位读取文件内容，一次读一整行：");
             reader = new BufferedReader(new FileReader(file));
             String text = null;
-            int line = 1;
+            int line = 0;
             // 一次读入一行，直到读入null为文件结束
             //解析数据文件
             while ((text = reader.readLine()) != null) {
                 // 显示行号
-                System.out.println("line " + line + ": " + text);
+                //System.out.println("line " + line + ": " + text);
             	 int seq=line;
             	 int num = Integer.parseInt(getStrFromText( "键号：", ", 频率",0 ,text));
             	 String name=getStrFromText( "音名：", ", 键号",0 ,text);
@@ -86,5 +86,13 @@ public class Convert {
     	String str=null;
     	str=text.substring(text.indexOf(start)+start.length());
     	return str;
+    }
+    
+    public static void out(Music music,String s){
+    	System.out.print(s);
+    	for (int i = 0; i < music.length(); i++) {
+			System.out.print(music.getKey(i).getNum()+" ");
+		}
+    	System.out.println();
     }
 }
