@@ -73,7 +73,7 @@ public class Calculate {
 	//Ñ¡ÔñÌØÕ÷¼ü
 	public int selectFeatureKey(Music stand,Music input){
 		
-		return 1;
+		return 36;
 	}
 	
 	public Result getResult(Music stand,Music input) {

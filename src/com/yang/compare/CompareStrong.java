@@ -22,7 +22,7 @@ public class CompareStrong extends BasicCompare {
 			rs[0] = 1.0f; // key是否匹配
 			rs[1] = 1; // 键位的得分
 			// 声音强度的分
-			float diff = stand.getStrong() * super.factor - input.getStrong();
+			float diff =  Math.abs(stand.getStrong() * super.factor - input.getStrong());
 			if (diff <= DATA.DIFF_STRONG_LEVEL1) {
 				rs[2] = DATA.DIFF_STRONG_SCORE1;
 			} else if (diff <= DATA.DIFF_STRONG_LEVEL2) {
@@ -38,18 +38,7 @@ public class CompareStrong extends BasicCompare {
 			rs[0] = 0;
 			rs[1] = 0;
 			// 声音强度的分
-			float diff = stand.getStrong() * super.factor - input.getStrong();
-			if (diff <= DATA.DIFF_STRONG_LEVEL1) {
-				rs[2] = DATA.DIFF_STRONG_SCORE1;
-			} else if (diff <= DATA.DIFF_STRONG_LEVEL2) {
-				rs[2] = DATA.DIFF_STRONG_SCORE2;
-			} else if (diff <= DATA.DIFF_STRONG_LEVEL3) {
-				rs[2] = DATA.DIFF_STRONG_SCORE3;
-			} else if (diff <= DATA.DIFF_STRONG_LEVEL4) {
-				rs[2] = DATA.DIFF_STRONG_SCORE4;
-			} else {
-				rs[2] = 0f;
-			}
+			rs[2] = 0f;
 		}
 		return rs;
 	}
@@ -60,6 +49,11 @@ public class CompareStrong extends BasicCompare {
 		return super.evaluate(stand, input);
 	}
 
+	@Override
+	public float divide(Music stand, Music input) {
+		// TODO Auto-generated method stub
+		return this.evaluate(stand, input);
+	}
 	/*
 	 * @Override public float evaluate(Music stand, Music input) { // TODO
 	 * Auto-generated method stub Convert.out(input, "input: ");
