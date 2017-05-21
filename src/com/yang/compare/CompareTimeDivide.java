@@ -11,7 +11,7 @@ import com.yang.mod.Music;
 public class CompareTimeDivide extends CompareGap {
 	private int segments=DATA.DEFAULT_SEG; //划分的段数
 
-	public CompareTimeDivide(float factor, int segments) {
+	public CompareTimeDivide(float factor) {
 		super(factor);
 		// TODO Auto-generated constructor stub
 	}

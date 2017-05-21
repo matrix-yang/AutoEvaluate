@@ -24,7 +24,7 @@ public class BasicCompare implements Compare {
 	public float[] compareKey(Key stand, Key input) {
 		// TODO Auto-generated method stub
 		float rs[] = new float[3];
-		System.out.println("stand" + stand.getNum() + "±È½Ï" + "input"
+		System.out.println("standµÄ¼üºÅ£º" + stand.getNum() + "  ±È½Ï  " + "inputµÄ¼üºÅ£º"
 				+ input.getNum());
 		if (stand.getNum() == input.getNum()) {
 			rs[0] = 1.0f; // keyÊÇ·ñÆ¥Åä
@@ -41,8 +41,8 @@ public class BasicCompare implements Compare {
 	@Override
 	public float evaluate(Music stand, Music input) {
 
-		Convert.out(input, "input: ");
-		Convert.out(stand, "stand: ");
+		Convert.out(input, "inputµÄ¼üºÅĞòÁĞ: ");
+		Convert.out(stand, "standµÄ¼üºÅĞòÁĞ: ");
 
 		boolean flag = true; // ÊÇ·ñ»ØË·
 		int index; // »ØËİ¼ÇÂ¼
@@ -70,9 +70,9 @@ public class BasicCompare implements Compare {
 				}
 			}
 		}
-		System.out.println("stand.getResidue()----------------->"
+		System.out.println("standÄ©Î²Ê£Óà¼üÊı£º----------------->"
 				+ stand.getResidue());
-		System.out.println("input.getResidue()----------------->"
+		System.out.println("inputÄ©Î²Ê£Óà¼üÊı£º----------------->"
 				+ input.getResidue());
 		
 		return score;

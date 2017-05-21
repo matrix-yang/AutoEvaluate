@@ -15,8 +15,10 @@ public class CompareGap extends CompareStrong {
 	public float[] compareKey(Key stand, Key input) {
 		// TODO Auto-generated method stub
 		float rs[] = new float[3];
-		System.out.println("stand" + stand.getNum() + "比较" + "input"
+		System.out.println("stand的键号：" + stand.getNum() + "  比较  " + "input的键号："
 				+ input.getNum());
+		System.out.println("stand的声音强度：" + stand.getStrong() * super.factor
+				+ "  比较  " + "input的声音强度：：" + input.getStrong());
 		if ( Math.abs(stand.getNum() - input.getNum()) <= DATA.DIFF_GAP_LEVEL1) {
 			rs[0] = 1.0f; // key是否匹配
 			rs[1] = DATA.DIFF_GAP_SCORE1; // 键位的得分

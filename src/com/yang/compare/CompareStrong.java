@@ -16,13 +16,16 @@ public class CompareStrong extends BasicCompare {
 	@Override
 	public float[] compareKey(Key stand, Key input) {
 		float rs[] = new float[3];
-		System.out.println("stand" + stand.getNum() + "比较" + "input"
+		System.out.println("stand的键号：" + stand.getNum() + "  比较  " + "input的键号："
 				+ input.getNum());
 		if (stand.getNum() == input.getNum()) {
 			rs[0] = 1.0f; // key是否匹配
 			rs[1] = 1; // 键位的得分
 			// 声音强度的分
-			float diff =  Math.abs(stand.getStrong() * super.factor - input.getStrong());
+			System.out.println("stand的声音强度：" + stand.getStrong() * super.factor
+					+ "  比较  " + "input的声音强度：：" + input.getStrong());
+			float diff = Math.abs(stand.getStrong() * super.factor
+					- input.getStrong());
 			if (diff <= DATA.DIFF_STRONG_LEVEL1) {
 				rs[2] = DATA.DIFF_STRONG_SCORE1;
 			} else if (diff <= DATA.DIFF_STRONG_LEVEL2) {

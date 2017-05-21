@@ -4,7 +4,10 @@ import java.util.Date;
 
 import com.yang.compare.BasicCompare;
 import com.yang.compare.Compare;
+import com.yang.compare.CompareFeatureKey;
+import com.yang.compare.CompareGap;
 import com.yang.compare.CompareStrong;
+import com.yang.compare.CompareTimeDivide;
 import com.yang.mod.Music;
 import com.yang.mod.Result;
 
@@ -67,7 +70,12 @@ public class Calculate {
 			this.compare=new CompareStrong(strong_ratio);
 			//this.compare=new BasicCompare();
 		}*/
-		this.compare=new CompareStrong(strong_ratio);				
+		
+		//this.compare=new BasicCompare();
+		//this.compare=new CompareStrong(strong_ratio);
+		//this.compare=new CompareGap(strong_ratio);
+		this.compare=new CompareTimeDivide(strong_ratio);
+		//this.compare=new CompareFeatureKey(strong_ratio,selectFeatureKey(stand, input));
 	}
 	
 	//Ñ¡ÔñÌØÕ÷¼ü

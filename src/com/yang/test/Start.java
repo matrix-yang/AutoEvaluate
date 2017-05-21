@@ -14,8 +14,7 @@ public class Start {
 		Music input =convert.getMusicFromText("bll.txt");
 		Calculate calculate=new Calculate();
 		Result result=calculate.getResult(stand, input);
-		System.out.println("result.getScore()---------------->"+result.getScore());
-		System.out.println("result.getStand()---------------->"+result.getStand());
+		Convert.out(result);
 /*		String text="04-29 18:35:46.460: V/KeyCount(15675): 7次：音名：#F(bG)_5, 键号：58, 频率：739.989Hz,误差：未计算(精度：0.8）	 强度：20.708987024212735";
 		
 		System.out.println(convert.getStrFromText( ": ", 0, text));

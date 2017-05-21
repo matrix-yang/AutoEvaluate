@@ -49,6 +49,7 @@ public class Result {
 
 
 	public float getDiff_ratio() {
+		diff_ratio=diff/stand;
 		return diff_ratio;
 	}
 

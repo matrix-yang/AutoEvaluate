@@ -11,6 +11,7 @@ import java.util.Date;
 
 import com.yang.mod.Key;
 import com.yang.mod.Music;
+import com.yang.mod.Result;
 
 
 public class Convert {
@@ -94,5 +95,34 @@ public class Convert {
 			System.out.print(music.getKey(i).getNum()+" ");
 		}
     	System.out.println();
+    }
+    
+    public static void out(Result result){
+/*    	private int stand;	    //标准乐曲的总按键个数
+    	private int input;		//输入乐曲的总按键个数
+    	private int diff;		// inpu - stand
+    	private float diff_ratio;  //  diff/stand 相差键数的比值
+    	private long standTime;   //标准输入时间   单位秒
+    	private long inputTime;	//标准输出时间
+    	private long timeDiff;    //时间差值inpuTime - standTime
+    	private float time_ratio; //时间差比值 timediff/standtime
+    	private float standStrong; //标准键位平均强度
+    	private float inputStrong; //输入键位平均强度
+    	private float strongDiff;  //声音强度差值，弹奏音强-标准音强  ，>0表示弹奏着音量大
+    	
+*/    	
+    	
+    	System.out.println("标准乐曲的总按键个数----------------------------->"+result.getStand());
+		System.out.println("输入乐曲的总按键个数----------------------------->"+result.getInput());
+		System.out.println("输入乐曲与标准乐曲的总按键个数差值---------------->"+result.getDiff());
+		System.out.println("按键差值所占的比例------------------------------->"+result.getDiff_ratio());
+		System.out.println("标准音乐时长------------------------------------->"+result.getStandTime()+"s");
+		System.out.println("输入音乐时长------------------------------------->"+result.getInputTime()+"s");	
+		System.out.println("时间差值：标准-输入------------------------------>"+result.getTimeDiff());
+		System.out.println("时间差值所占的比例------------------------------->"+result.getTime_ratio());
+		System.out.println("标准音乐按键键平均声音强度------------------------>"+result.getStandStrong());
+		System.out.println("输入音乐按键键平均声音强度------------------------>"+result.getInputStrong());
+    	System.out.println("强度差值----------------------------------------->"+result.getStrongDiff());
+		System.out.println("综合得分----------------------------------------->"+result.getScore());
     }
 }
