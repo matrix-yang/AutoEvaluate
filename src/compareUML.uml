@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_cJzGsD9sEeelEvcidDCb7w">
+  <name xsi:nil="true"/>
+  <elementImport xmi:id="_cN-cED9sEeelEvcidDCb7w">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:id="_cOTzQD9sEeelEvcidDCb7w">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_cJzGsT9sEeelEvcidDCb7w" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_cJzGsj9sEeelEvcidDCb7w" name="yang">
+      <packagedElement xmi:type="uml:Package" xmi:id="_cJzGsz9sEeelEvcidDCb7w" name="compare">
+        <packagedElement xmi:type="uml:Class" xmi:id="_cJzGtD9sEeelEvcidDCb7w" name="CompareFeatureKey">
+          <generalization xmi:id="_cMxiMD9sEeelEvcidDCb7w" general="_cKitkD9sEeelEvcidDCb7w"/>
+          <ownedAttribute xmi:id="_cOOTsD9sEeelEvcidDCb7w" name="featureKeyNum" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_cOTzQT9sEeelEvcidDCb7w" name="compareKey" visibility="public">
+            <ownedParameter xmi:id="_cOTzQj9sEeelEvcidDCb7w" name="stand" type="_cMnxNT9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cOTzQz9sEeelEvcidDCb7w" name="input" type="_cMnxNT9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cOTzRD9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_cOYEsD9sEeelEvcidDCb7w" name="evaluate" visibility="public">
+            <ownedParameter xmi:id="_cOYEsT9sEeelEvcidDCb7w" name="stand" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cOYEsj9sEeelEvcidDCb7w" name="input" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cOYEsz9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_cOcWID9sEeelEvcidDCb7w" name="divide" visibility="public">
+            <ownedParameter xmi:id="_cOcWIT9sEeelEvcidDCb7w" name="stand" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cOcWIj9sEeelEvcidDCb7w" name="input" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cOcWIz9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_cKY8kT9sEeelEvcidDCb7w" name="BasicCompare" clientDependency="_cPNyMD9sEeelEvcidDCb7w">
+          <ownedAttribute xmi:id="_cPWVED9sEeelEvcidDCb7w" name="factor" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_cPWVET9sEeelEvcidDCb7w" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_cPjJYD9sEeelEvcidDCb7w" name="hz_diff" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_cPjJYT9sEeelEvcidDCb7w"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_cPNyMD9sEeelEvcidDCb7w" name="Compare" supplier="_cKY8kD9sEeelEvcidDCb7w" client="_cKY8kT9sEeelEvcidDCb7w" contract="_cKY8kD9sEeelEvcidDCb7w"/>
+          <ownedOperation xmi:id="_cPsTUD9sEeelEvcidDCb7w" name="compareKey" visibility="public">
+            <ownedParameter xmi:id="_cPsTUT9sEeelEvcidDCb7w" name="stand" type="_cMnxNT9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cPsTUj9sEeelEvcidDCb7w" name="input" type="_cMnxNT9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cPsTUz9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_cPsTVD9sEeelEvcidDCb7w" name="evaluate" visibility="public">
+            <ownedParameter xmi:id="_cPsTVT9sEeelEvcidDCb7w" name="stand" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cPsTVj9sEeelEvcidDCb7w" name="input" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cPsTVz9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_cP2EUD9sEeelEvcidDCb7w" name="divide" visibility="public">
+            <ownedParameter xmi:id="_cP2EUT9sEeelEvcidDCb7w" name="stand" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cP2EUj9sEeelEvcidDCb7w" name="input" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cP2EUz9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_cQlrMT9sEeelEvcidDCb7w" name="compareKey" visibility="public">
+            <ownedParameter xmi:id="_cQlrMj9sEeelEvcidDCb7w" name="stand" type="_cMnxNT9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQlrMz9sEeelEvcidDCb7w" name="input" type="_cMnxNT9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQlrND9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_cKY8kj9sEeelEvcidDCb7w" name="CompareTimeDivide">
+          <generalization xmi:id="_cP_OQD9sEeelEvcidDCb7w" general="_cKitkD9sEeelEvcidDCb7w"/>
+          <ownedAttribute xmi:id="_cP_OQT9sEeelEvcidDCb7w" name="segments" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_cQI_QD9sEeelEvcidDCb7w" name="compareKey" visibility="public">
+            <ownedParameter xmi:id="_cQI_QT9sEeelEvcidDCb7w" name="stand" type="_cMnxNT9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQI_Qj9sEeelEvcidDCb7w" name="input" type="_cMnxNT9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQI_Qz9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_cQSwQD9sEeelEvcidDCb7w" name="evaluate" visibility="public">
+            <ownedParameter xmi:id="_cQSwQT9sEeelEvcidDCb7w" name="stand" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQSwQj9sEeelEvcidDCb7w" name="input" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQSwQz9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_cQSwRD9sEeelEvcidDCb7w" name="divide" visibility="public">
+            <ownedParameter xmi:id="_cQSwRT9sEeelEvcidDCb7w" name="stand" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQSwRj9sEeelEvcidDCb7w" name="input" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQSwRz9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_cKitkD9sEeelEvcidDCb7w" name="CompareGap">
+          <generalization xmi:id="_cQb6MD9sEeelEvcidDCb7w" general="_cKitkT9sEeelEvcidDCb7w"/>
+          <ownedOperation xmi:id="_cQb6MT9sEeelEvcidDCb7w" name="compareKey" visibility="public">
+            <ownedParameter xmi:id="_cQb6Mj9sEeelEvcidDCb7w" name="stand" type="_cMnxNT9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQb6Mz9sEeelEvcidDCb7w" name="input" type="_cMnxNT9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQb6ND9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_cQb6NT9sEeelEvcidDCb7w" name="evaluate" visibility="public">
+            <ownedParameter xmi:id="_cQb6Nj9sEeelEvcidDCb7w" name="stand" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQb6Nz9sEeelEvcidDCb7w" name="input" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQb6OD9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_cKitkT9sEeelEvcidDCb7w" name="CompareStrong">
+          <generalization xmi:id="_cQlrMD9sEeelEvcidDCb7w" general="_cKY8kT9sEeelEvcidDCb7w"/>
+          <ownedOperation xmi:id="_cQlrNT9sEeelEvcidDCb7w" name="evaluate" visibility="public">
+            <ownedParameter xmi:id="_cQlrNj9sEeelEvcidDCb7w" name="stand" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQlrNz9sEeelEvcidDCb7w" name="input" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQlrOD9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_cQu1ID9sEeelEvcidDCb7w" name="divide" visibility="public">
+            <ownedParameter xmi:id="_cQu1IT9sEeelEvcidDCb7w" name="stand" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQu1Ij9sEeelEvcidDCb7w" name="input" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cQu1Iz9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_cKY8kD9sEeelEvcidDCb7w" name="Compare">
+          <ownedOperation xmi:id="_cOhOoD9sEeelEvcidDCb7w" name="compareKey" visibility="public">
+            <ownedParameter xmi:id="_cOhOoT9sEeelEvcidDCb7w" name="stand" type="_cMnxNT9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cOhOoj9sEeelEvcidDCb7w" name="input" type="_cMnxNT9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cOhOoz9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_cOicwD9sEeelEvcidDCb7w" name="evaluate" visibility="public">
+            <ownedParameter xmi:id="_cOicwT9sEeelEvcidDCb7w" name="stand" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cOicwj9sEeelEvcidDCb7w" name="input" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cOicwz9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_cOjD0D9sEeelEvcidDCb7w" name="divide" visibility="public">
+            <ownedParameter xmi:id="_cOjD0T9sEeelEvcidDCb7w" name="stand" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cOjD0j9sEeelEvcidDCb7w" name="input" type="_cMnxNj9sEeelEvcidDCb7w"/>
+            <ownedParameter xmi:id="_cOjD0z9sEeelEvcidDCb7w" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_cMnxND9sEeelEvcidDCb7w" name="mod">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_cMnxNT9sEeelEvcidDCb7w" name="Key"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_cMnxNj9sEeelEvcidDCb7w" name="Music"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_cMnxNz9sEeelEvcidDCb7w" name="Result"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_cMnxOD9sEeelEvcidDCb7w" name="constant">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_cMnxOT9sEeelEvcidDCb7w" name="DATA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_cMnxOj9sEeelEvcidDCb7w" name="util">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_cMnxOz9sEeelEvcidDCb7w" name="Convert"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_cMnxMD9sEeelEvcidDCb7w" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_cMnxMT9sEeelEvcidDCb7w" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_cMnxMj9sEeelEvcidDCb7w" name="ArrayList"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_cMnxMz9sEeelEvcidDCb7w" name="List"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_cMnxPD9sEeelEvcidDCb7w" name="Date"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
